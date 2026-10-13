@@ -5,14 +5,14 @@ from langgraph.checkpoint.postgres import PostgresSaver
 from langgraph.graph.message import add_messages
 from dotenv import load_dotenv
 from langchain_groq import ChatGroq
-
 import os
+
+import streamlit as st
 
 load_dotenv()
 
-# Environment variables
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-DATABASE_URL = os.getenv("DATABASE_URL")
+GROQ_API_KEY = os.getenv("GROQ_API_KEY") or st.secrets.get("GROQ_API_KEY")
+DATABASE_URL = os.getenv("DATABASE_URL") or st.secrets.get("DATABASE_URL")
 
 if not GROQ_API_KEY:
     raise ValueError("GROQ_API_KEY is missing")
