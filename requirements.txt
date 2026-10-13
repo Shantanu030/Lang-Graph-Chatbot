@@ -1,0 +1,13 @@
+langgraph
+ipykernel
+langchain-google-genai
+python-dotenv
+langchain-groq
+streamlit
+langgraph
+langgraph-checkpoint-postgres
+langchain-groq
+langchain-core
+python-dotenv
+psycopg
+psycopg-binary
